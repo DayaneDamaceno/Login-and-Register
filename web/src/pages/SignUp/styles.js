@@ -2,14 +2,22 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+
+  a:hover {
+    opacity: 0.7;
+  }
 `;
-export const Login = styled.div`
-  width: 35%;
+
+export const Form = styled.form`
+  width: 38%;
   color: white;
+  display: flex;
+  flex-direction: column;
 
   h1 {
     font-size: 28px;
@@ -23,14 +31,6 @@ export const Login = styled.div`
     font-weight: 500;
     font-size: 16px;
   }
-  a:hover {
-    opacity: 0.7;
-  }
-`;
-
-export const Form = styled.form`
-  display: flex;
-  flex-direction: column;
 
   button {
     height: 45px;
