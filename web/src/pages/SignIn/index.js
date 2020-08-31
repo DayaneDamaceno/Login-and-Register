@@ -1,13 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 
 import log from '../../assets/ilustLog.svg';
 import { Container, Login, FormData, InputData } from './styles';
 
+import { signInRequest } from '../../store/modules/auth/actions';
+
 function SignIn() {
-  function handleSubmit(data) {
-    console.log(data);
-    // { email: 'test@example.com', password: '123456' }
+  const dispatch = useDispatch();
+
+  async function handleSubmit({ email, password }) {
+    dispatch(signInRequest(email, password));
   }
 
   return (

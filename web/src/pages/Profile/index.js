@@ -1,4 +1,5 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { FaPowerOff } from 'react-icons/fa';
 import { useSpring } from 'react-spring';
 
@@ -13,6 +14,10 @@ const trans = (x, y, s) =>
   `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
 function Profile() {
+  const user = useSelector((state) => state.user.profile);
+  console.log(user);
+  const dispatch = useDispatch();
+
   const [props, set] = useSpring(() => ({
     xys: [0, 0, 0.7],
     config: { mass: 1, tension: 400, friction: 10 },

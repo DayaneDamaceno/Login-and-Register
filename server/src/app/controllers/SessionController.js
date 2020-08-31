@@ -26,9 +26,11 @@ class SessionController {
     });
 
     return res.json({
-      id,
-      name,
-      email,
+      user: {
+        id,
+        name,
+        email,
+      },
       token,
     });
   }
