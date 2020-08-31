@@ -42,6 +42,10 @@ export const FormData = styled(Form)`
     margin: 5px 0 15px;
     transition: background 0.2s;
 
+    img {
+      height: 45px;
+    }
+
     &:hover {
       background: #c93967;
     }
