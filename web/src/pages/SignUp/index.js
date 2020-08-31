@@ -1,11 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 import { Container, FormData, InputData } from './styles';
+// import load from '../../assets/load.gif';
+
+import { signUpRequest } from '../../store/modules/auth/actions';
 
 function SignUp() {
-  function handleSubmit(data) {
-    console.log(data);
+  // const loading = useSelector((state) => state.auth.loading);
+  const dispatch = useDispatch();
+
+  async function handleSubmit({ name, email, password }) {
+    try {
+      dispatch(signUpRequest(name, email, password));
+    } catch (error) {
+      console.tron.error(error);
+    }
   }
 
   return (
