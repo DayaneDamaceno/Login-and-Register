@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { animated } from 'react-spring';
 
 export const Container = styled.div`
   display: flex;
@@ -9,7 +10,7 @@ export const Container = styled.div`
   width: 30%;
   justify-content: space-between;
 `;
-export const Image = styled.img`
+export const Image = styled(animated.img)`
   height: 150px;
   border: 4px solid #f5487f;
   border-radius: 50%;
