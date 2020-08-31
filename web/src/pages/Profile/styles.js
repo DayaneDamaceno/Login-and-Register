@@ -9,6 +9,21 @@ export const Container = styled.div`
   transform: translate(-50%, -50%);
   width: 30%;
   justify-content: space-between;
+
+  @media (max-width: 1180px) {
+    width: 50%;
+  }
+
+  @media (max-width: 700px) {
+    width: 85%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width: 300px) {
+    width: 95%;
+  }
 `;
 export const Image = styled(animated.img)`
   height: 150px;
@@ -18,6 +33,7 @@ export const Image = styled(animated.img)`
 export const ProfileInfo = styled.div`
   display: flex;
   flex-direction: column;
+
   h1 {
     color: #fff;
     font-size: 20px;
@@ -44,6 +60,22 @@ export const ProfileInfo = styled.div`
 
     &:hover {
       background: #c93967;
+    }
+  }
+
+  @media (max-width: 700px) {
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width: 400px) {
+    text-align: center;
+    h1 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 16px;
     }
   }
 `;

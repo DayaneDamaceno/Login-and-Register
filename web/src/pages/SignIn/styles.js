@@ -8,10 +8,31 @@ export const Container = styled.div`
   height: 100%;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 1200px) {
+    justify-content: space-around;
+    img {
+      height: 300px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    img {
+      display: none;
+    }
+  }
 `;
 export const Login = styled.div`
   width: 35%;
   color: white;
+
+  @media (max-width: 900px) {
+    width: 65%;
+  }
+
+  @media (max-width: 500px) {
+    width: 85%;
+  }
 
   h1 {
     font-size: 28px;
@@ -27,6 +48,24 @@ export const Login = styled.div`
   }
   a:hover {
     opacity: 0.7;
+  }
+
+  @media (max-width: 900px) {
+    width: 65%;
+  }
+
+  @media (max-width: 500px) {
+    width: 85%;
+  }
+
+  @media (max-width: 300px) {
+    width: 95%;
+    h1 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 14px;
+    }
   }
 `;
 

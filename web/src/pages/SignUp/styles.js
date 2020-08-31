@@ -46,6 +46,27 @@ export const FormData = styled(Form)`
       background: #c93967;
     }
   }
+  @media (max-width: 900px) {
+    width: 70%;
+  }
+  @media (max-width: 500px) {
+    width: 90%;
+    h1 {
+      font-size: 24px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 300px) {
+    width: 100%;
+    h1 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
 `;
 
 export const InputData = styled(Input)`
