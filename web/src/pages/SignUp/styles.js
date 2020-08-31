@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { Form } from '@unform/web';
+import Input from '../../components/Input';
 
 export const Container = styled.div`
   display: flex;
@@ -13,7 +15,7 @@ export const Container = styled.div`
   }
 `;
 
-export const Form = styled.form`
+export const FormData = styled(Form)`
   width: 38%;
   color: white;
   display: flex;
@@ -46,7 +48,7 @@ export const Form = styled.form`
   }
 `;
 
-export const Input = styled.input`
+export const InputData = styled(Input)`
   width: 100%;
   height: 40px;
   padding-left: 20px;

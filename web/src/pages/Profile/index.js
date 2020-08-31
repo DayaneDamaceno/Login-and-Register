@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FaPowerOff } from 'react-icons/fa';
 import { useSpring } from 'react-spring';
 
 import { Container, Image, ProfileInfo } from './styles';
-
-// import avatar from '../../assets/avatar.svg';
 
 const calc = (x, y) => [
   -(y - window.innerHeight / 2) / 20,

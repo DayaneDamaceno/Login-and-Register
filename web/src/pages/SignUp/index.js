@@ -1,24 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { Container, Form, Input } from './styles';
+import { Container, FormData, InputData } from './styles';
 
 function SignUp() {
+  function handleSubmit(data) {
+    console.log(data);
+  }
+
   return (
     <Container>
-      <Form>
+      <FormData onSubmit={handleSubmit}>
         <h1>SignUp</h1>
         <p>Discover and have fun on our platform</p>
 
         <label htmlFor="name">Name</label>
-        <Input
+        <InputData
           name="name"
           autoComplete="off"
           placeholder="Insert your name here"
         />
 
         <label htmlFor="email">E-mail</label>
-        <Input
+        <InputData
           type="email"
           name="email"
           spellCheck="false"
@@ -26,10 +30,14 @@ function SignUp() {
           placeholder="Insert your e-mail address"
         />
         <label htmlFor="password">Password</label>
-        <Input type="password" name="password" placeholder="Password secret" />
+        <InputData
+          type="password"
+          name="password"
+          placeholder="Password secret"
+        />
 
         <button type="submit">Cadastrar</button>
-      </Form>
+      </FormData>
       <Link to="/">Já tem conta? Acessar</Link>
     </Container>
   );
