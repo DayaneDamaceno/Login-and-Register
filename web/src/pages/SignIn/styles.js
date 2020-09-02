@@ -111,3 +111,15 @@ export const InputData = styled(Input)`
     color: #75839d;
   }
 `;
+
+export const Loading = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background: #242e42;
+  opacity: 0.8;
+  z-index: 1;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+`;

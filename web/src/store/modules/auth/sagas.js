@@ -10,6 +10,8 @@ export function* signIn({ payload }) {
   try {
     const { email, password } = payload;
 
+    yield delay(2000);
+
     const response = yield call(api.post, `sessions`, {
       email,
       password,
@@ -20,8 +22,6 @@ export function* signIn({ payload }) {
     api.defaults.headers.Authorization = `Bearer ${token}`;
 
     yield put(signInSuccess(token, user));
-
-    yield delay(2000);
 
     history.push('/profile');
   } catch (error) {

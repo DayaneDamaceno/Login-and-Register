@@ -30,7 +30,7 @@ function Profile() {
       exit="exit"
     >
       <Image
-        src="https://api.adorable.io/avatars/3"
+        src={`https://api.adorable.io/avatars/${user.id}`}
         alt="Avatar"
         onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
         onMouseLeave={() => set({ xys: [0, 0, 0.8] })}
