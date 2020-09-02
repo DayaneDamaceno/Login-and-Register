@@ -4,8 +4,8 @@ Projeto para fins de estudo sobre Redux e Redux Saga, que tem como proposta um s
 
 #### Project
 
-[x] Backend
-[x] Web Application
+- [x] Backend
+- [x] Web Application
 
 ![IMG_7161](https://user-images.githubusercontent.com/63814261/92045167-47745c80-ed56-11ea-8a1d-b67a235502e1.gif)
 
