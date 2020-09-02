@@ -1,16 +1,19 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import { Form } from '@unform/web';
 import Input from '../../components/Input';
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
   display: flex;
   width: 100%;
   height: 100%;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+  padding: 0 100px;
 
   @media (max-width: 1200px) {
     justify-content: space-around;
+    padding: 0;
     img {
       height: 300px;
     }
@@ -22,8 +25,8 @@ export const Container = styled.div`
     }
   }
 `;
-export const Login = styled.div`
-  width: 35%;
+export const Login = styled(motion.div)`
+  width: 30%;
   color: white;
 
   @media (max-width: 900px) {

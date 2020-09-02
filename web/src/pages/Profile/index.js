@@ -3,21 +3,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { FaPowerOff } from 'react-icons/fa';
 import { useSpring } from 'react-spring';
 
+import { profileVariants, calc, trans } from '../../styles/animation';
 import { Container, Image, ProfileInfo } from './styles';
 
 import { signOut } from '../../store/modules/auth/actions';
 
-const calc = (x, y) => [
-  -(y - window.innerHeight / 2) / 20,
-  (x - window.innerWidth / 2) / 20,
-  1.1,
-];
-const trans = (x, y, s) =>
-  `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
-
 function Profile() {
   const user = useSelector((state) => state.user.profile);
-  console.log(user);
+
   const dispatch = useDispatch();
 
   const [props, set] = useSpring(() => ({
@@ -30,7 +23,12 @@ function Profile() {
   }
 
   return (
-    <Container>
+    <Container
+      variants={profileVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
       <Image
         src="https://api.adorable.io/avatars/3"
         alt="Avatar"

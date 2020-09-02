@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import { Form } from '@unform/web';
 import Input from '../../components/Input';
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -16,7 +17,7 @@ export const Container = styled.div`
 `;
 
 export const FormData = styled(Form)`
-  width: 38%;
+  width: 30%;
   color: white;
   display: flex;
   flex-direction: column;

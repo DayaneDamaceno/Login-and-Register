@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import log from '../../assets/ilustLog.svg';
 import load from '../../assets/load.svg';
 import { Container, Login, FormData, InputData } from './styles';
-
+import { signInVariants } from '../../styles/animation';
 import { signInRequest } from '../../store/modules/auth/actions';
 
 function SignIn() {
@@ -18,7 +18,7 @@ function SignIn() {
 
   return (
     <Container>
-      <Login>
+      <Login variants={signInVariants} initial="hidden" animate="visible">
         <h1>Log in to profile</h1>
         <p>Discover and have fun on our platform</p>
         <FormData onSubmit={handleSubmit}>

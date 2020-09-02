@@ -11,9 +11,10 @@ export default createGlobalStyle`
   }
   html, body, #root{
     min-height: 100%;
+    overflow: hidden;
   }
   #root{
-    max-width: 1100px;
+    max-width: 100%;
     height: 100vh;
     margin: 0 auto;
     padding: 0 20px 50px;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch } from 'react-router-dom';
+import { Switch, useLocation } from 'react-router-dom';
 
 import Route from './Route';
 
@@ -9,8 +9,10 @@ import SignUp from '../pages/SignUp';
 import Profile from '../pages/Profile';
 
 export default function Routes() {
+  const location = useLocation();
+
   return (
-    <Switch>
+    <Switch location={location} key={location.key}>
       <Route exact path="/" component={SignIn} />
       <Route path="/register" component={SignUp} />
 

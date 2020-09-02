@@ -1,28 +1,16 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import { animated } from 'react-spring';
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
   display: flex;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 30%;
-  justify-content: space-between;
-
-  @media (max-width: 1180px) {
-    width: 50%;
-  }
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 
   @media (max-width: 700px) {
-    width: 85%;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  @media (max-width: 300px) {
-    width: 95%;
   }
 `;
 export const Image = styled(animated.img)`
@@ -33,6 +21,7 @@ export const Image = styled(animated.img)`
 export const ProfileInfo = styled.div`
   display: flex;
   flex-direction: column;
+  margin-left: 20px;
 
   h1 {
     color: #fff;
@@ -66,6 +55,8 @@ export const ProfileInfo = styled.div`
   @media (max-width: 700px) {
     justify-content: center;
     align-items: center;
+    margin-left: 0;
+    margin-top: 20px;
   }
 
   @media (max-width: 400px) {

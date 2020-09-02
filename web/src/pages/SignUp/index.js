@@ -2,13 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
+import { signUpVariants } from '../../styles/animation';
 import { Container, FormData, InputData } from './styles';
-// import load from '../../assets/load.gif';
 
 import { signUpRequest } from '../../store/modules/auth/actions';
 
 function SignUp() {
-  // const loading = useSelector((state) => state.auth.loading);
   const dispatch = useDispatch();
 
   async function handleSubmit({ name, email, password }) {
@@ -20,7 +19,12 @@ function SignUp() {
   }
 
   return (
-    <Container>
+    <Container
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      variants={signUpVariants}
+    >
       <FormData onSubmit={handleSubmit}>
         <h1>SignUp</h1>
         <p>Discover and have fun on our platform</p>
